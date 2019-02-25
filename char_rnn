@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Feb 23 20:29:36 2019
+
+@author: xuankai
+"""
+
+import tensorflow as tf
+import numpy as np
+
+BasicRNNCell=tf.nn.rnn_cell.BasicRNNCell
+cell=tf.nn.rnn_cell.MultiRNNCell([BasicRNNCell(num_units=1),BasicRNNCell(num_units=2)])
+print(cell.state_size)
